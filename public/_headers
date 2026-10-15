@@ -1,0 +1,17 @@
+# Used by Netlify and Cloudflare Pages (Vercel uses vercel.json)
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
+/*.md
+  Content-Type: text/markdown; charset=utf-8
+/blog/rss.xml
+  Content-Type: application/rss+xml; charset=utf-8
+/blog/feed.json
+  Content-Type: application/feed+json; charset=utf-8
+/assets/*
+  Cache-Control: public, max-age=86400
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN

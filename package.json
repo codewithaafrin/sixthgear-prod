@@ -1,0 +1,14 @@
+{
+  "name": "sixthgear-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sixth Gear: sixthgear.ai marketing site (static, no framework, no dependencies).",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node scripts/generate-seo.mjs",
+    "build:ping": "node scripts/generate-seo.mjs --ping",
+    "preview:drafts": "INCLUDE_DRAFTS=1 node scripts/generate-seo.mjs",
+    "dev": "node scripts/generate-seo.mjs && npx --yes serve public -l 3000"
+  }
+}

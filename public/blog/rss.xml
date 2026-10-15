@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Sixth Gear Blog</title>
+    <link>https://sixthgear.ai/blog/</link>
+    <atom:link href="https://sixthgear.ai/blog/rss.xml" rel="self" type="application/rss+xml" />
+    <description>Practical writing on AI transformation and workflow automation from Sixth Gear.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 15 Oct 2026 17:13:34 GMT</lastBuildDate>
+
+  </channel>
+</rss>

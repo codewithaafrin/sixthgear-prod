@@ -1,0 +1,9 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Sixth Gear Blog",
+  "home_page_url": "https://sixthgear.ai/blog/",
+  "feed_url": "https://sixthgear.ai/blog/feed.json",
+  "description": "Practical writing on AI transformation and workflow automation from Sixth Gear.",
+  "language": "en",
+  "items": []
+}
