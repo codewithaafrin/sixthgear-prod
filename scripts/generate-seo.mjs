@@ -258,7 +258,7 @@ ${jsonld.map((j) => `  <script type="application/ld+json">${JSON.stringify(j)}</
 <body>
   <header class="pg-head"><div class="in">
     <a class="pg-brand" href="/" aria-label="${esc(site.name)} home">${MARK}<span>${esc(site.name)}</span></a>
-    <nav class="pg-nav" aria-label="Primary"><a href="/blog/">Blog</a><a href="/glossary/">Glossary</a><a class="cta" href="${site.bookingUrl}">Book a call</a></nav>
+    <nav class="pg-nav" aria-label="Primary"><a href="/blog/">Blog</a><a class="cta" href="${site.bookingUrl}">Book a call</a></nav>
   </div></header>
   <main${wide ? ' class="wide"' : ''}>
 ${main}
@@ -268,7 +268,7 @@ ${main}
       <p><a class="btn" href="${site.bookingUrl}">Book a call with our founder</a> &nbsp; <a href="/#go">Get the free workshop</a></p>
     </aside>
   </main>
-  <footer class="pg-foot"><div class="in"><span>${esc(site.name)}™ · © ${new Date().getFullYear()}</span><span><a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/glossary/">Glossary</a> · <a href="/blog/rss.xml">RSS</a> · <a href="mailto:${site.email}">${site.email}</a></span></div></footer>
+  <footer class="pg-foot"><div class="in"><span>${esc(site.name)}™ · © ${new Date().getFullYear()}</span><span><a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="mailto:${site.email}">${site.email}</a></span></div></footer>
 </body>
 </html>
 `;
@@ -355,7 +355,7 @@ write('blog/index.html', page({
     <p class="summary">Practical, answer-first writing on AI transformation and workflow automation.</p>
     ${posts.length ? `<ul class="posts">
 ${posts.map((p) => `      <li><div class="eyebrow"><time datetime="${p.date}">${humanDate(p.date)}</time>${p.tags.length ? ' · ' + esc(p.tags.slice(0, 2).join(' · ')) : ''}</div><h2><a href="/blog/${p.slug}/">${esc(p.title)}</a></h2><p>${esc(p.description)}</p></li>`).join('\n')}
-    </ul>` : `<p class="empty">New articles are on the way. Subscribe via <a href="/blog/rss.xml">RSS</a>.</p>`}`,
+    </ul>` : `<p class="empty">New articles are on the way.</p>`}`,
 }));
 
 for (const p of posts) {

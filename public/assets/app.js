@@ -9,7 +9,7 @@
 (function () {
   'use strict';
 
-  var LEADS_EMAIL = 'aswin@codevantage.io';
+  var LEADS_EMAIL = 'admin@codevantage.io';
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
   var E = {};
@@ -115,7 +115,7 @@
       var tx = (k / 8) * (N - 1) * step + step / 2;
       c.textAlign = k === 0 ? 'left' : (k === 8 ? 'right' : 'center');
       c.fillStyle = k >= 7 ? 'rgba(254,120,2,.85)' : 'rgba(242,236,228,.36)';
-      c.fillText(String(k), k === 0 ? 0 : (k === 8 ? w : tx), base + 10);
+      c.fillText(k + '×', k === 0 ? 0 : (k === 8 ? w : tx), base + 10);
     }
   }
 
@@ -328,14 +328,24 @@
       if (fv) fv.hidden = true; if (dv) dv.hidden = false;
       if (E.wsDone) E.wsDone.focus();
     }
-    // Production tip: replace this with a POST to your form service (Formspree, FormSubmit, HubSpot…).
     try { window.dispatchEvent(new CustomEvent('sixthgear:' + (kind === 'form' ? 'lead' : 'worksheet'), { detail: v })); } catch (x) {}
-    setTimeout(function () { window.location.href = href; }, 150);
+    // Send through /api/lead or /api/worksheet (functions/ folder, emails via Resend).
+    // If that endpoint isn't available (local preview, not configured, network error), fall back to the visitor's email app.
+    var hp = $('[data-hp="' + kind + '"]');
+    var payload = { name: name, email: v.email.trim(), company: v.company.trim(), needs: kind === 'form' ? v.needs.trim() : '',
+      website: hp ? hp.value : '', t: Date.now() - (openedAt[kind === 'form' ? 'form' : 'ws'] || 0) };
+    var fallback = function () { window.location.href = href; };
+    if (!window.fetch || location.protocol === 'file:') { setTimeout(fallback, 150); return; }
+    fetch(kind === 'form' ? '/api/lead' : '/api/worksheet', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+      .then(function (r) { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
+      .then(function (j) { if (!j || !j.ok) throw new Error('not ok'); })
+      .catch(fallback);
   }
 
   /* ---------------- modals ---------------- */
-  var current = null, opener = null;
+  var current = null, opener = null, openedAt = {};
   function openModal(name) {
+    if (name === 'form' || name === 'ws') openedAt[name] = Date.now();
     $$('[data-modal]').forEach(function (m) { m.hidden = m.getAttribute('data-modal') !== name; });
     current = name;
     document.documentElement.style.overflow = 'hidden';
@@ -364,6 +374,7 @@
     if (menuBtn) menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
   }
   document.addEventListener('click', function (e) { if (menu && !e.target.closest('.sg-dd')) setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu && menu.classList.contains('open')) { setMenu(false); if (menuBtn) menuBtn.focus(); } });
 
   /* ---------------- action table ---------------- */
   var A = {
@@ -412,4 +423,19 @@
       if (fn) el.addEventListener(EVENT[attr], fn);
     });
   });
+})();
+
+/* ---------------- brand film: play only when at least half visible, respect reduced motion ---------------- */
+(function () {
+  var v = document.querySelector('[data-ref="film"]');
+  if (!v) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  v.muted = true;
+  if (reduce) { v.pause(); v.setAttribute('controls', ''); return; }
+  if (!window.IntersectionObserver) { v.play(); return; }
+  // Play only while at least half of the film is on screen; pause otherwise.
+  new IntersectionObserver(function (en) {
+    if (en[0].intersectionRatio >= 0.5) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+    else v.pause();
+  }, { threshold: [0, 0.5, 1] }).observe(v);
 })();

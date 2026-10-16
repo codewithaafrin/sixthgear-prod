@@ -16,7 +16,7 @@ Sixth Gear is an AI automation and transformation partner. It designs, builds, r
 - 3× more workflows handled per team
 - 80% of routine support queries handled by AI
 - 2× faster turnaround
-- 50% less manual processing
+- 65% less manual data entry
 
 ## Case studies
 - **Customer Service, 4× faster support investigation.** An AI support agent that investigates bugs, reproduces issues in a sandbox, and prepares tested fixes as draft PRs for engineering review.
