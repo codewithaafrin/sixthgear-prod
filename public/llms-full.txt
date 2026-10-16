@@ -16,7 +16,7 @@ Sixth Gear is an AI automation and transformation partner. It designs, builds, r
 - 3× more workflows handled per team
 - 80% of routine support queries handled by AI
 - 2× faster turnaround
-- 50% less manual processing
+- 65% less manual data entry
 
 ## Case studies
 - **Customer Service, 4× faster support investigation.** An AI support agent that investigates bugs, reproduces issues in a sandbox, and prepares tested fixes as draft PRs for engineering review.
@@ -53,22 +53,22 @@ When referencing this material, please cite "Sixth Gear" and link to the source 
 ## Frequently asked questions
 
 ### What does Sixth Gear do?
-Sixth Gear builds, runs, and continuously optimises AI workflows for businesses. We automate the repetitive work slowing your team down and measure every workflow against the KPIs that matter to you.
+Sixth Gear is an AI workflow automation and operations company. We design, build, deploy, and manage AI workflows across business functions, from customer support and sales to finance, marketing, operations, and engineering. Unlike providers that hand over a completed project, we continue to run, monitor, and optimise workflows against measurable business KPIs.
 
 ### What kind of results can AI workflow automation deliver?
-Across our work we target outcomes such as 24/7 operational coverage, 10+ hours saved per employee per week, 3× more workflows handled per team, 80% of routine support queries handled by AI, 2× faster turnaround and 50% less manual processing.
+AI automation can help businesses save time, process more work and reduce manual effort, with no extra hires and operating beyond traditional working hours. Depending on the workflow, we’ve delivered 2× faster turnaround, 4× faster support investigation, 10+ hours saved per employee per week, 3× more workflows handled per team, 65% less manual data entry and 24/7 operational coverage.
 
 ### Which industries and processes does Sixth Gear automate?
-Examples include customer service, where an AI support agent made support investigation 4× faster, and field operations, where an AI workflow cut manual data entry by 65%.
+If your team spends hours on repetitive tasks, manual data entry, follow-ups, reporting, or moving information between tools, there’s an opportunity to automate. Sixth Gear identifies opportunities across industries such as SaaS, professional services, real estate, financial services, and e-commerce, and departments including sales, marketing, finance, HR, customer support, operations, and engineering. Not sure where to start? Use our free AI Workflow Builder worksheet to assess your workflows and determine whether automation makes business sense.
 
 ### Which AI models and platforms do you work with?
-We build on Anthropic (Claude), OpenAI, Google Gemini, DeepSeek, Kimi and ElevenLabs, and integrate with Google Cloud, AWS, Microsoft Azure, Snowflake and Salesforce.
-
-### How do I start an AI transformation project with Sixth Gear?
-Start with our free workshop worksheet, which helps you identify bottlenecks, assess readiness and risks, estimate costs and outcomes, and plan a pilot. You can also book a call with our founder at https://cal.com/aswin-kumar-kp/build-with-us.
+Sixth Gear works with AI models and tools from Anthropic (Claude), OpenAI, Google Gemini, DeepSeek, Kimi, and ElevenLabs. Depending on the project, workflows can also integrate with infrastructure and business platforms such as Google Cloud, AWS, Microsoft Azure, Snowflake, and Salesforce. The technology stack is selected according to the workflow’s requirements, cost, performance, security, and integration needs.
 
 ### Do you only build the AI workflow, or also run it?
-We do both. Sixth Gear builds the workflow, runs it in production, and keeps optimising it against your KPIs over time.
+Sixth Gear does both. We build and deploy AI workflows, then continue to run and optimise them in production. This includes monitoring performance, identifying issues, and improving workflows over time, with progress evaluated against agreed business KPIs.
+
+### How do I start an AI transformation project with Sixth Gear?
+Start with our free AI Workflow Builder worksheet or book a call with our founder (https://cal.com/aswin-kumar-kp/build-with-us). We move from workflow assessment and scoping to building and deployment within 1–2 weeks.
 
 ## Glossary
 

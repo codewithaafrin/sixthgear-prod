@@ -79,7 +79,19 @@
         "isPartOf": { "@id": "https://sixthgear.ai/#website" },
         "about": { "@id": "https://sixthgear.ai/#org" },
         "inLanguage": "en",
-        "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["#hero h1", "#hero .lede", "#work h2"] }
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["#hero h1", "#hero .lede", "#work h2"] },
+        "video": { "@id": "https://sixthgear.ai/#film" }
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://sixthgear.ai/#film",
+        "name": "Sixth Gear: AI agents at work",
+        "description": "AI agents at work: invoices extracted into a reconciled ledger, nine customer chats answered at once, a contract vetted and redlined, a checkout bug found and fixed with tests passing, documentation errors caught and corrected, and documents sorted into folders.",
+        "thumbnailUrl": "https://sixthgear.ai/assets/film/sixth-gear-film-poster.jpg",
+        "contentUrl": "https://sixthgear.ai/assets/film/sixth-gear-film.mp4",
+        "uploadDate": "2026-10-16",
+        "duration": "PT33S",
+        "publisher": { "@id": "https://sixthgear.ai/#org" }
       },
       {
         "@type": "Service",
@@ -122,13 +134,55 @@
         "@type": "FAQPage",
         "@id": "https://sixthgear.ai/#faq",
         "mainEntity": [
-          { "@type": "Question", "name": "What does Sixth Gear do?", "acceptedAnswer": { "@type": "Answer", "text": "Sixth Gear builds, runs, and continuously optimises AI workflows for businesses. We automate the repetitive work slowing your team down and measure every workflow against the KPIs that matter to you." } },
-          { "@type": "Question", "name": "What kind of results can AI workflow automation deliver?", "acceptedAnswer": { "@type": "Answer", "text": "Across our work we target outcomes such as 24/7 operational coverage, 10+ hours saved per employee per week, 3× more workflows handled per team, 80% of routine support queries handled by AI, 2× faster turnaround and 50% less manual processing." } },
-          { "@type": "Question", "name": "Which industries and processes does Sixth Gear automate?", "acceptedAnswer": { "@type": "Answer", "text": "Examples include customer service, where an AI support agent made support investigation 4× faster, and field operations, where an AI workflow cut manual data entry by 65%." } },
-          { "@type": "Question", "name": "Which AI models and platforms do you work with?", "acceptedAnswer": { "@type": "Answer", "text": "We build on Anthropic (Claude), OpenAI, Google Gemini, DeepSeek, Kimi and ElevenLabs, and integrate with Google Cloud, AWS, Microsoft Azure, Snowflake and Salesforce." } },
-          { "@type": "Question", "name": "How do I start an AI transformation project with Sixth Gear?", "acceptedAnswer": { "@type": "Answer", "text": "Start with our free workshop worksheet, which helps you identify bottlenecks, assess readiness and risks, estimate costs and outcomes, and plan a pilot. You can also book a call with our founder at https://cal.com/aswin-kumar-kp/build-with-us." } },
-          { "@type": "Question", "name": "Do you only build the AI workflow, or also run it?", "acceptedAnswer": { "@type": "Answer", "text": "We do both. Sixth Gear builds the workflow, runs it in production, and keeps optimising it against your KPIs over time." } }
-        ]
+            {
+              "@type": "Question",
+              "name": "What does Sixth Gear do?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sixth Gear is an AI workflow automation and operations company. We design, build, deploy, and manage AI workflows across business functions, from customer support and sales to finance, marketing, operations, and engineering. Unlike providers that hand over a completed project, we continue to run, monitor, and optimise workflows against measurable business KPIs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What kind of results can AI workflow automation deliver?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "AI automation can help businesses save time, process more work and reduce manual effort, with no extra hires and operating beyond traditional working hours. Depending on the workflow, we’ve delivered <strong>2× faster</strong> turnaround, <strong>4× faster</strong> support investigation, <strong>10+ hours</strong> saved per employee per week, <strong>3× more</strong> workflows handled per team, <strong>65% less</strong> manual data entry and <strong>24/7 operational</strong> coverage."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which industries and processes does Sixth Gear automate?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "If your team spends hours on repetitive tasks, manual data entry, follow-ups, reporting, or moving information between tools, there’s an opportunity to automate. Sixth Gear identifies opportunities across industries such as SaaS, professional services, real estate, financial services, and e-commerce, and departments including sales, marketing, finance, HR, customer support, operations, and engineering. Not sure where to start? Use our free AI Workflow Builder worksheet to assess your workflows and determine whether automation makes business sense."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which AI models and platforms do you work with?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sixth Gear works with AI models and tools from Anthropic (Claude), OpenAI, Google Gemini, DeepSeek, Kimi, and ElevenLabs. Depending on the project, workflows can also integrate with infrastructure and business platforms such as Google Cloud, AWS, Microsoft Azure, Snowflake, and Salesforce. The technology stack is selected according to the workflow’s requirements, cost, performance, security, and integration needs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you only build the AI workflow, or also run it?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sixth Gear does both. We build and deploy AI workflows, then continue to run and optimise them in production. This includes monitoring performance, identifying issues, and improving workflows over time, with progress evaluated against agreed business KPIs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I start an AI transformation project with Sixth Gear?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Start with our free AI Workflow Builder worksheet or book a call with our founder. We move from workflow assessment and scoping to building and deployment within 1–2 weeks."
+              }
+            }
+          ]
       }
     ]
   }
@@ -456,23 +510,13 @@
       <div style="display: flex; flex-wrap: wrap; align-items: center; gap: clamp(40px, 6vw, 96px)">
         <!-- video -->
         <div data-ref="proof" data-k="proof" class="sg-wipe" style="flex: 1.5 1 520px; min-width: 0; max-width: 100%">
-          <a class="sg-video" href="#proof" aria-label="Play the Sixth Gear film" style="position: relative; display: block; aspect-ratio: 16 / 10; border-radius: 22px; overflow: hidden; background: #151210; border: 1px solid rgba(242,236,228,.1); color: #f2ece4; box-shadow: 0 50px 120px -50px rgba(254,120,2,.35)">
-            <div aria-hidden="true" style="position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(242,236,228,.025) 0 1px, transparent 1px 4px)"></div>
-            <div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(ellipse 80% 70% at 30% 110%, rgba(254,120,2,.18), transparent 60%)"></div>
-            <div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 0; height: 40%; background: linear-gradient(180deg, transparent, rgba(255,175,56,.05), transparent); animation: sg-scan 7s linear infinite"></div>
-            <span aria-hidden="true" style="position: absolute; left: 18px; top: 18px; width: 18px; height: 18px; border-left: 1.5px solid rgba(242,236,228,.5); border-top: 1.5px solid rgba(242,236,228,.5)"></span>
-            <span aria-hidden="true" style="position: absolute; right: 18px; top: 18px; width: 18px; height: 18px; border-right: 1.5px solid rgba(242,236,228,.5); border-top: 1.5px solid rgba(242,236,228,.5)"></span>
-            <span aria-hidden="true" style="position: absolute; left: 18px; bottom: 18px; width: 18px; height: 18px; border-left: 1.5px solid rgba(242,236,228,.5); border-bottom: 1.5px solid rgba(242,236,228,.5)"></span>
-            <span aria-hidden="true" style="position: absolute; right: 18px; bottom: 18px; width: 18px; height: 18px; border-right: 1.5px solid rgba(242,236,228,.5); border-bottom: 1.5px solid rgba(242,236,228,.5)"></span>
-            <div style="position: absolute; left: 46px; right: 46px; top: 22px; display: flex; justify-content: space-between; align-items: center; font-family: 'Martian Mono', ui-monospace, Menlo, monospace; font-variation-settings: 'wdth' 88; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: #8d8780">
-              <span>Film · 01:00</span>
-              <span class="sg-l sg-revl" aria-hidden="true"><i style="background: #f2ece4"></i><i style="background: #f2ece4"></i><i style="background: #f2ece4"></i><i style="background: #f2ece4"></i><i style="background: #ffaf38"></i><i style="background: #fe7802"></i></span>
-            </div>
-            <span class="sg-play" aria-hidden="true" style="position: absolute; left: 50%; top: 50%; width: 84px; height: 84px; margin: -42px 0 0 -42px; border-radius: 50%; border: 1px solid rgba(242,236,228,.35); background: rgba(14,12,10,.4); display: flex; align-items: center; justify-content: center; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px)">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="#f2ece4" stroke="#f2ece4" stroke-width="1.5" stroke-linejoin="round" style="margin-left: 4px"><path d="M7 4.5v15l12-7.5z"></path></svg>
-            </span>
-            <span style="position: absolute; left: 46px; bottom: 22px; right: 46px; font-style: italic; font-size: 14px; color: #8d8780">[Brand film — drop the video here]</span>
-          </a>
+          <figure class="sg-video" style="position: relative; display: block; margin: 0; aspect-ratio: 16 / 10; border-radius: 22px; overflow: hidden; background: #151210; border: 1px solid rgba(242,236,228,.1); box-shadow: 0 50px 120px -50px rgba(254,120,2,.35)">
+            <video data-ref="film" muted loop playsinline preload="metadata" poster="/assets/film/sixth-gear-film-poster.jpg" aria-label="Sixth Gear film: AI agents at work: invoices extracted into a reconciled ledger, nine customer chats answered at once, a contract vetted and redlined, a checkout bug found and fixed with tests passing, documentation errors caught and corrected, and documents sorted into folders." style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+              <source src="/assets/film/sixth-gear-film.webm" type="video/webm">
+              <source src="/assets/film/sixth-gear-film.mp4" type="video/mp4">
+            </video>
+            <figcaption class="sg-sr">Film, 33 seconds. AI agents at work: invoices extracted into a reconciled ledger, nine customer chats answered at once, a contract vetted and redlined, a checkout bug found and fixed with tests passing, documentation errors caught and corrected, and documents sorted into folders.</figcaption>
+          </figure>
         </div>
 
         <!-- numbers -->
@@ -486,10 +530,10 @@
             
               <li class="sg-stat sg-rise" aria-hidden="true" style="display: flex; align-items: center; gap: clamp(16px, 2.4vw, 32px); height: var(--rh); padding: 0 0 0 clamp(4px, 1vw, 14px); transition-delay: 0ms">
                 <span class="sg-num" style="flex: none; width: clamp(6.4rem, 9vw, 8.4rem); display: flex; align-items: flex-start; font-family: 'Anybody', system-ui, sans-serif; font-variation-settings: 'wdth' 116, 'wght' 300; font-size: clamp(2.1rem, 3.3vw, 3rem); line-height: 1; letter-spacing: -.02em">
-                  <span class="sg-odo" data-odo="50" data-dur="2" data-base="850">50</span>
+                  <span class="sg-odo" data-odo="65" data-dur="2" data-base="850">65</span>
                   <span style="line-height: 1; color: #fe7802">%</span>
                 </span>
-                <span class="sg-lab" style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; letter-spacing: -.005em; font-size: clamp(1.08rem, 1.4vw, 1.25rem); line-height: 1.35; color: #c9c2b9; text-wrap: pretty">less manual processing</span>
+                <span class="sg-lab" style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; letter-spacing: -.005em; font-size: clamp(1.08rem, 1.4vw, 1.25rem); line-height: 1.35; color: #c9c2b9; text-wrap: pretty">less manual data entry</span>
               </li>
             
               <li class="sg-stat sg-rise" style="display: flex; align-items: center; gap: clamp(16px, 2.4vw, 32px); height: var(--rh); padding: 0 0 0 clamp(4px, 1vw, 14px); transition-delay: 110ms">
@@ -534,10 +578,10 @@
             
               <li class="sg-stat sg-rise" style="display: flex; align-items: center; gap: clamp(16px, 2.4vw, 32px); height: var(--rh); padding: 0 0 0 clamp(4px, 1vw, 14px); transition-delay: 330ms">
                 <span class="sg-num" style="flex: none; width: clamp(6.4rem, 9vw, 8.4rem); display: flex; align-items: flex-start; font-family: 'Anybody', system-ui, sans-serif; font-variation-settings: 'wdth' 116, 'wght' 300; font-size: clamp(2.1rem, 3.3vw, 3rem); line-height: 1; letter-spacing: -.02em">
-                  <span class="sg-odo" data-odo="50" data-dur="2" data-base="850">50</span>
+                  <span class="sg-odo" data-odo="65" data-dur="2" data-base="850">65</span>
                   <span style="line-height: 1; color: #fe7802">%</span>
                 </span>
-                <span class="sg-lab" style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; letter-spacing: -.005em; font-size: clamp(1.08rem, 1.4vw, 1.25rem); line-height: 1.35; color: #c9c2b9; text-wrap: pretty">less manual processing</span>
+                <span class="sg-lab" style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; letter-spacing: -.005em; font-size: clamp(1.08rem, 1.4vw, 1.25rem); line-height: 1.35; color: #c9c2b9; text-wrap: pretty">less manual data entry</span>
               </li>
             
               <li class="sg-stat sg-rise" aria-hidden="true" style="display: flex; align-items: center; gap: clamp(16px, 2.4vw, 32px); height: var(--rh); padding: 0 0 0 clamp(4px, 1vw, 14px); transition-delay: 330ms">
@@ -691,32 +735,32 @@
   <!-- FAQ: visible answers (also marked up as FAQPage in the head) -->
   <section id="faq" style="position: relative; z-index: 1; padding: clamp(56px, 7vw, 104px) 0; border-top: 1px solid rgba(242,236,228,.07)">
     <div style="max-width: 920px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px)">
-      <div class="sg-eyebrow">Questions, answered</div>
+      <div class="sg-eyebrow">FAQ</div>
       <h2 style="margin: 0 0 clamp(24px, 3vw, 36px); font-family: 'Anybody', system-ui, sans-serif; font-variation-settings: 'wdth' 110, 'wght' 340; font-size: clamp(1.9rem, 3.6vw, 3rem); line-height: 1.08; letter-spacing: -.025em; color: #f2ece4">AI transformation, <em style="font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300; color: #fe7802">without the guesswork.</em></h2>
       <div>
-        <details class="sg-faq" open>
+        <details class="sg-faq">
           <summary><span>What does Sixth Gear do?</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fe7802" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></summary>
-          <p>Sixth Gear builds, runs, and continuously optimises AI workflows for businesses. We automate the repetitive work slowing your team down and measure every workflow against the KPIs that matter to you.</p>
+          <p>Sixth Gear is an AI workflow automation and operations company. We design, build, deploy, and manage AI workflows across business functions, from <strong>customer support</strong> and <strong>sales</strong> to <strong>finance</strong>, <strong>marketing</strong>, <strong>operations</strong>, and <strong>engineering</strong>. Unlike providers that hand over a completed project, we continue to run, monitor, and optimise workflows against measurable business KPIs.</p>
         </details>
         <details class="sg-faq">
           <summary><span>What kind of results can AI workflow automation deliver?</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fe7802" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></summary>
-          <p>Across our work we target outcomes such as 24/7 operational coverage, 10+ hours saved per employee per week, 3× more workflows handled per team, 80% of routine support queries handled by AI, 2× faster turnaround and 50% less manual processing.</p>
+          <p>AI automation can help businesses save time, process more work and reduce manual effort, with no extra hires and operating beyond traditional working hours. Depending on the workflow, we’ve delivered 2× faster turnaround, 4× faster support investigation, 10+ hours saved per employee per week, 3× more workflows handled per team, 65% less manual data entry and 24/7 operational coverage.</p>
         </details>
         <details class="sg-faq">
           <summary><span>Which industries and processes does Sixth Gear automate?</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fe7802" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></summary>
-          <p>Examples include customer service, where an AI support agent made support investigation 4× faster, and field operations, where an AI workflow cut manual data entry by 65%.</p>
+          <p>If your team spends hours on repetitive tasks, manual data entry, follow-ups, reporting, or moving information between tools, there’s an opportunity to automate. Sixth Gear identifies opportunities across industries such as SaaS, professional services, real estate, financial services, and e-commerce, and departments including sales, marketing, finance, HR, customer support, operations, and engineering. Not sure where to start? Use our <a href="#go" data-on-click="ws.open" aria-haspopup="dialog">free AI Workflow Builder worksheet</a> to assess your workflows and determine whether automation makes business sense.</p>
         </details>
         <details class="sg-faq">
           <summary><span>Which AI models and platforms do you work with?</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fe7802" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></summary>
-          <p>We build on Anthropic (Claude), OpenAI, Google Gemini, DeepSeek, Kimi and ElevenLabs, and integrate with Google Cloud, AWS, Microsoft Azure, Snowflake and Salesforce.</p>
-        </details>
-        <details class="sg-faq">
-          <summary><span>How do I start an AI transformation project with Sixth Gear?</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fe7802" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></summary>
-          <p>Start with our free workshop worksheet, which helps you identify bottlenecks, assess readiness and risks, estimate costs and outcomes, and plan a pilot. You can also book a call with our founder at <a href="https://cal.com/aswin-kumar-kp/build-with-us">cal.com/aswin-kumar-kp/build-with-us</a>.</p>
+          <p>Sixth Gear works with AI models and tools from Anthropic (Claude), OpenAI, Google Gemini, DeepSeek, Kimi, and ElevenLabs. Depending on the project, workflows can also integrate with infrastructure and business platforms such as Google Cloud, AWS, Microsoft Azure, Snowflake, and Salesforce. The technology stack is selected according to the workflow’s requirements, cost, performance, security, and integration needs.</p>
         </details>
         <details class="sg-faq">
           <summary><span>Do you only build the AI workflow, or also run it?</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fe7802" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></summary>
-          <p>We do both. Sixth Gear builds the workflow, runs it in production, and keeps optimising it against your KPIs over time.</p>
+          <p>Sixth Gear does both. We build and deploy AI workflows, then continue to run and optimise them in production. This includes monitoring performance, identifying issues, and improving workflows over time, with progress evaluated against agreed business KPIs.</p>
+        </details>
+        <details class="sg-faq" open>
+          <summary><span>How do I start an AI transformation project with Sixth Gear?</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fe7802" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg></summary>
+          <p>Start with our <a href="#go" data-on-click="ws.open" aria-haspopup="dialog">free AI Workflow Builder worksheet</a> or <a href="https://cal.com/aswin-kumar-kp/build-with-us" target="_blank" rel="noopener">book a call with our founder</a>. We move from workflow assessment and scoping to building and deployment within 1–2 weeks.</p>
         </details>
       </div>
     </div>
@@ -775,7 +819,7 @@
     <footer style="position: relative; border-top: 1px solid rgba(242,236,228,.08)">
       <div style="max-width: 1280px; margin: 0 auto; padding: 28px clamp(16px, 4vw, 48px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px 32px; font-family: 'Martian Mono', ui-monospace, Menlo, monospace; font-variation-settings: 'wdth' 88; font-size: 11px; letter-spacing: .1em; color: #8d8780">
         <span>Sixth Gear™ · © 2026</span>
-        <span style="display: flex; flex-wrap: wrap; gap: 8px 22px"><a class="sg-mail" href="/blog/" style="color: #f2ece4">Blog</a><a class="sg-mail" href="/glossary/" style="color: #f2ece4">Glossary</a><a class="sg-mail" href="/blog/rss.xml" style="color: #f2ece4">RSS</a><a class="sg-mail" href="mailto:humans@sixthgear.ai" style="color: #f2ece4">humans@sixthgear.ai</a></span>
+        <span style="display: flex; flex-wrap: wrap; gap: 8px 22px"><a class="sg-mail" href="/blog/" style="color: #f2ece4">Blog</a><a class="sg-mail" href="mailto:humans@sixthgear.ai" style="color: #f2ece4">humans@sixthgear.ai</a></span>
       </div>
     </footer>
   </section>
@@ -789,6 +833,7 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
         </button>
         <form novalidate data-on-submit="form.submit" data-on-keydown="form.enter" style="display: flex; flex-direction: column; gap: 18px; padding: clamp(24px, 5vw, 40px)">
+              <input type="text" name="website" data-hp="form" class="sg-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div style="display: flex; flex-direction: column; gap: 10px; padding-right: 48px">
             <span style="display: flex; align-items: center; gap: 10px; font-family: 'Martian Mono', ui-monospace, Menlo, monospace; font-variation-settings: 'wdth' 88; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: #ffaf38">
               <svg width="24" height="16" viewBox="-6 -6 112 76" aria-hidden="true" style="overflow: visible"><g stroke="#f2ece4" stroke-opacity=".4" fill="none"><line x1="10" y1="6" x2="10" y2="58" vector-effect="non-scaling-stroke" stroke-width="1.2"></line><line x1="50" y1="6" x2="50" y2="58" vector-effect="non-scaling-stroke" stroke-width="1.2"></line><line x1="90" y1="6" x2="90" y2="58" vector-effect="non-scaling-stroke" stroke-width="1.2"></line><line x1="10" y1="32" x2="90" y2="32" vector-effect="non-scaling-stroke" stroke-width="1.2"></line></g><circle cx="90" cy="58" r="11" fill="#fe7802"></circle></svg>
@@ -891,6 +936,7 @@
         <div style="flex: 1 1 320px; min-width: 0; padding: clamp(28px, 5vw, 48px); padding-top: clamp(72px, 8vw, 80px)">
           <div data-ws-view="form">
             <form novalidate data-on-submit="ws.submit" data-on-keydown="ws.enter" style="display: flex; flex-direction: column; gap: 16px">
+              <input type="text" name="website" data-hp="ws" class="sg-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
               <div style="display: flex; flex-direction: column; gap: 8px">
                 <label for="sg-w-name" class="sg-lbl">Name <span aria-hidden="true" style="color: #fe7802">*</span></label>
                 <input data-ref="wName" id="sg-w-name" class="sg-in" type="text" name="name" autoComplete="name" required maxLength="80" data-on-change="ws.set.name" data-on-blur="ws.blur.name" aria-invalid="false" aria-describedby="sg-we-name">

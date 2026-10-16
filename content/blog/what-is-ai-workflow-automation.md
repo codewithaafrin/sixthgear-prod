@@ -34,7 +34,7 @@ For example, in customer service, an AI support agent can investigate a bug repo
 
 ## What results should you expect?
 
-Results depend on the process, but the outcomes Sixth Gear targets across engagements include 24/7 operational coverage, 10+ hours saved per employee per week, 3× more workflows handled per team, 80% of routine support queries handled by AI, 2× faster turnaround and 50% less manual processing. The key is to agree on the KPI before you build, then measure against it after launch.
+Results depend on the process, but the outcomes Sixth Gear targets across engagements include 24/7 operational coverage, 10+ hours saved per employee per week, 3× more workflows handled per team, 80% of routine support queries handled by AI, 2× faster turnaround and 65% less manual data entry. The key is to agree on the KPI before you build, then measure against it after launch.
 
 ## When is AI workflow automation the right choice?
 
