@@ -30,7 +30,7 @@ A typical workflow has four parts:
 3. **Action**: the workflow updates systems, runs calculations, drafts outputs or reproduces an issue.
 4. **Review**: a person approves, corrects or signs off where the stakes are high (human-in-the-loop).
 
-For example, in customer service, an AI support agent can investigate a bug report, reproduce the issue in a sandbox and prepare a tested fix as a draft pull request for an engineer to review. Sixth Gear built exactly this for a client and saw support investigation become **4× faster**. In field operations, an AI workflow that combines field data capture, rule-based calculations and report drafting cut manual data entry by **65%**.
+For example, in customer service, an AI support agent can investigate a bug report, reproduce the issue in a sandbox and prepare a tested fix as a draft pull request for an engineer to review. Sixth Gear built exactly this for a client and saw first replies become **150× faster**, from over 9 hours to under 4 minutes. In field operations, an AI workflow that combines field data capture, rule-based calculations and report drafting cut manual data entry by **65%**.
 
 ## What results should you expect?
 

@@ -34,7 +34,7 @@ Using results to improve the workflow every week or month:
 
 ## Why does this matter?
 
-Most of the value of AI automation compounds after launch. A support agent that resolves a growing share of routine queries, or a data workflow that steadily cuts manual entry, only gets there through continuous tuning. Sixth Gear's case studies show the kind of results this produces: 4× faster support investigation in customer service and 65% less manual data entry in field operations.
+Most of the value of AI automation compounds after launch. A support agent that resolves a growing share of routine queries, or a data workflow that steadily cuts manual entry, only gets there through continuous tuning. Sixth Gear's case studies show the kind of results this produces: 150× faster first reply in customer service and 65% less manual data entry in field operations.
 
 ## Key takeaways
 

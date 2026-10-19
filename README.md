@@ -92,7 +92,7 @@ npm run dev        # builds, then serves http://localhost:3000
 ## Before or soon after launch
 - [x] **Brand film:** `public/assets/film/` (WebM + MP4 + poster). To swap it, replace those files and keep the names.
 - [ ] **Social profiles:** add LinkedIn, X, Crunchbase and similar URLs to `sameAs` in `scripts/site.config.mjs` **and** in the Organization JSON-LD in `public/index.html`.
-- [ ] **Case-study pages:** "Read case study" currently links to the case section. Add full pages when ready.
+- [x] **Case studies:** `public/case-studies/ai-support-agent/` and `public/case-studies/valuation-back-office/` (each a page + `index.md` for AI tools). To edit them, ask Claude, or edit the HTML directly.
 - [ ] **Form emails:** follow Step 3b (free Resend account + one API key).
 - [x] **Worksheet PDF:** `public/assets/sixth-gear-ai-workshop-worksheet.pdf`. Replace the file (same name) to update it.
 - [ ] Validate with Google's Rich Results Test and PageSpeed Insights.

@@ -10,7 +10,7 @@ export const site = {
   tagline: 'Your business, in a higher gear.',
   summary:
     'Sixth Gear is an AI automation and transformation partner. We build, run, and continuously optimise AI workflows against the KPIs that matter to your business, so your team can grow bigger, not busier.',
-  email: 'humans@sixthgear.ai',
+  email: 'admin@codevantage.io',
   leadsEmail: 'aswin@codevantage.io',
   bookingUrl: 'https://cal.com/aswin-kumar-kp/build-with-us',
   founder: { name: 'Aswin Kumar KP', role: 'Founder' },
@@ -59,16 +59,21 @@ export const site = {
 
   caseStudies: [
     {
-      industry: 'Customer Service',
-      result: '4× faster support investigation',
+      industry: 'SaaS Customer Service',
+      result: '$68k a year saved vs. hiring',
       description:
         'An AI support agent that investigates bugs, reproduces issues in a sandbox, and prepares tested fixes as draft PRs for engineering review.',
+      // Full case study page (its index.md is copied into llms-full.txt).
+      url: '/case-studies/ai-support-agent/',
+      title: 'From 9 Hours to 4 Minutes: How an AI Support Agent Replaced a Departing Hire',
     },
     {
-      industry: 'Field Operations',
-      result: '65% less manual data entry',
+      industry: 'Real Estate',
+      result: '4× more reports on time',
       description:
-        'An AI-powered workflow that brings field data capture, rule-based calculations, and report drafting into one streamlined process.',
+        'An AI back office that turns site visits into bank-ready valuation reports, with every report drafted for a qualified valuer to review and approve.',
+      url: '/case-studies/valuation-back-office/',
+      title: '4× More Reports on Time: Automating a Valuation Firm’s Back Office',
     },
   ],
 
@@ -92,7 +97,7 @@ export const site = {
     },
     {
       q: "What kind of results can AI workflow automation deliver?",
-      a: "AI automation can help businesses save time, process more work and reduce manual effort, with no extra hires and operating beyond traditional working hours. Depending on the workflow, we’ve delivered 2× faster turnaround, 4× faster support investigation, 10+ hours saved per employee per week, 3× more workflows handled per team, 65% less manual data entry and 24/7 operational coverage.",
+      a: "AI automation can help businesses save time, process more work and reduce manual effort, with no extra hires and operating beyond traditional working hours. Depending on the workflow, we’ve saved a client $68k a year vs. hiring, and delivered 6× faster turnaround, 10× faster ticket resolution, 4× more reports on time, 2× capacity with the same team and zero errors in live reports.",
     },
     {
       q: "Which industries and processes does Sixth Gear automate?",
@@ -128,6 +133,8 @@ export const site = {
   // Static pages for the sitemap. Add new pages here as the site grows.
   pages: [
     { path: '/', changefreq: 'weekly', priority: 1.0 },
+    { path: '/case-studies/ai-support-agent/', changefreq: 'monthly', priority: 0.8 },
+    { path: '/case-studies/valuation-back-office/', changefreq: 'monthly', priority: 0.8 },
     { path: '/blog/', changefreq: 'weekly', priority: 0.8 },
     { path: '/glossary/', changefreq: 'monthly', priority: 0.6 },
   ],

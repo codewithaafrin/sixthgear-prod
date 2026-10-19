@@ -23,7 +23,7 @@ Pick the one or two that match why you are automating:
 | Reduce manual effort | Manual processing or data-entry time | 50–65% less |
 | Always-on service | Hours of coverage | 24/7 |
 
-The targets above are outcomes Sixth Gear aims for across engagements, including a 4× faster support investigation in customer service and 65% less manual data entry in field operations.
+The targets above are outcomes Sixth Gear aims for across engagements, including a 150× faster first reply in customer service and 65% less manual data entry in field operations.
 
 ## What is the formula?
 

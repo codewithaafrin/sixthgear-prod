@@ -122,15 +122,15 @@
   /* ---------------- intro timeline ---------------- */
   var intro = !reduced, introDone = !intro, t0 = null;
   var SEGS = [
-    { g: 1, a: 0.8, b: 6.9, d: 1050 }, { g: 2, a: 3.7, b: 6.9, d: 640 }, { g: 3, a: 4.3, b: 6.9, d: 590 },
-    { g: 4, a: 4.8, b: 6.9, d: 550 }, { g: 5, a: 5.2, b: 6.9, d: 520 }, { g: 6, a: 5.5, b: 2.2, d: 1500, out: true }
+    { g: 1, a: 0.8, b: 6.9, d: 580 }, { g: 2, a: 3.7, b: 6.9, d: 350 }, { g: 3, a: 4.3, b: 6.9, d: 320 },
+    { g: 4, a: 4.8, b: 6.9, d: 300 }, { g: 5, a: 5.2, b: 6.9, d: 290 }, { g: 6, a: 5.5, b: 2.2, d: 820, out: true }
   ];
   if (intro) setGear(1); else { setGear(6); r = 2.2; logoGT = logoTarget = 5; }
   setGate(E.logoKnob, E.logoTrail, null, logoGT);
   setGate(E.gateKnob, E.gateTrail, E.gateHalo, 0);
-  function startIntro() { if (intro && t0 == null) { fit(); t0 = performance.now() + 380; } }
+  function startIntro() { if (intro && t0 == null) { fit(); t0 = performance.now() + 150; } }
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { fit(); startIntro(); });
-  setTimeout(startIntro, 1600);
+  setTimeout(startIntro, 900);
 
   /* ---------------- pointer: ember glow + throttle ---------------- */
   var glow = { x: 0, y: 0, tx: 0, ty: 0, on: false }, hover = false, throttle = 0.2;
@@ -218,17 +218,22 @@
   /* ---------------- odometer columns (HTML holds the plain number; we build the roll) ---------------- */
   if (!reduced) {
     $$('.sg-odo').forEach(function (el) {
+      if (el.closest('[data-ref="stats"]')) return; // stats carousel: plain numbers, no roll
       var num = el.getAttribute('data-odo'), dur = el.getAttribute('data-dur') || '2', base = +el.getAttribute('data-base') || 0;
       el.setAttribute('aria-label', num);
       el.textContent = '';
       el.style.display = 'inline-flex';
+      // Roll up from ~70% of the value (not from zero): each column moves forward a few digits.
+      var nv = parseInt(num, 10), NL = num.length;
+      var from = String(Math.max(NL > 1 ? Math.pow(10, NL - 1) : 0, nv - Math.ceil(nv * 0.3)));
+      while (from.length < NL) from = '0' + from;
       num.split('').forEach(function (ch, i) {
-        var d = parseInt(ch, 10);
+        var d = parseInt(ch, 10), a = parseInt(from[i], 10), end = d >= a ? d : d + 10;
         var col = document.createElement('span');
         col.setAttribute('aria-hidden', 'true');
         col.style.cssText = 'display:inline-block;height:1em;overflow:hidden';
         var strip = document.createElement('span');
-        strip.style.cssText = 'display:flex;flex-direction:column;align-items:center;transform:translateY(calc(var(--odo, 0) * -' + (10 + d) + 'em));transition:transform ' + dur + 's cubic-bezier(.16,1,.3,1) ' + (base + i * 140) + 'ms';
+        strip.style.cssText = 'display:flex;flex-direction:column;align-items:center;transform:translateY(calc(-' + a + 'em - var(--odo, 0) * ' + (end - a) + 'em));transition:transform ' + dur + 's cubic-bezier(.16,1,.3,1) ' + (base + i * 80) + 'ms';
         for (var k = 0; k < 20; k++) {
           var n = document.createElement('span');
           n.style.cssText = 'display:block;height:1em;line-height:1';
