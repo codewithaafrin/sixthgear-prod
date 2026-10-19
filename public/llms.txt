@@ -19,8 +19,8 @@ Sixth Gear is an AI automation and transformation partner. It designs, builds, r
 - 65% less manual data entry
 
 ## Case studies
-- **Customer Service, 4× faster support investigation.** An AI support agent that investigates bugs, reproduces issues in a sandbox, and prepares tested fixes as draft PRs for engineering review.
-- **Field Operations, 65% less manual data entry.** An AI-powered workflow that brings field data capture, rule-based calculations, and report drafting into one streamlined process.
+- **SaaS Customer Service, $68k a year saved vs. hiring.** An AI support agent that investigates bugs, reproduces issues in a sandbox, and prepares tested fixes as draft PRs for engineering review. Full case study: [From 9 Hours to 4 Minutes: How an AI Support Agent Replaced a Departing Hire](https://sixthgear.ai/case-studies/ai-support-agent/)
+- **Real Estate, 4× more reports on time.** An AI back office that turns site visits into bank-ready valuation reports, with every report drafted for a qualified valuer to review and approve. Full case study: [4× More Reports on Time: Automating a Valuation Firm’s Back Office](https://sixthgear.ai/case-studies/valuation-back-office/)
 
 ## Platforms and models used
 Anthropic (Claude), OpenAI, Google Gemini, DeepSeek, Kimi, ElevenLabs, Typesafe, Google Cloud, AWS, Snowflake, Microsoft Azure, Salesforce.
@@ -37,7 +37,7 @@ AI transformation, AI workflow automation, business process automation with AI, 
 
 ## Contact
 - Website: https://sixthgear.ai
-- Email: humans@sixthgear.ai
+- Email: admin@codevantage.io
 - Book a call with the founder (Aswin Kumar KP): https://cal.com/aswin-kumar-kp/build-with-us
 
 ## Key pages

@@ -90,6 +90,14 @@ if (existsSync(BLOG_OUT)) for (const d of readdirSync(BLOG_OUT)) {
 }
 console.log(`Sixth Gear SEO build: ${posts.length} published post(s)`);
 
+
+// Full case-study text for llms-full.txt (from the page's markdown mirror).
+function caseStudyMd(c) {
+  try {
+    return readFileSync(join(PUBLIC, c.url, 'index.md'), 'utf8').replace(/^# /m, '#### ');
+  } catch { return ''; }
+}
+
 // ---------- sitemap.xml ----------
 const lastSiteUpdate = TODAY;
 const urls = [
@@ -182,7 +190,7 @@ ${site.services.map((s) => `- **${s.name}**: ${s.description}`).join('\n')}
 ${site.outcomes.map((o) => `- ${o}`).join('\n')}
 
 ## Case studies
-${site.caseStudies.map((c) => `- **${c.industry}, ${c.result}.** ${c.description}`).join('\n')}
+${site.caseStudies.map((c) => `- **${c.industry}, ${c.result}.** ${c.description}${c.url ? ` Full case study: [${c.title}](${site.url}${c.url})` : ''}`).join('\n')}
 
 ## Platforms and models used
 ${site.stack.join(', ')}.
@@ -268,7 +276,7 @@ ${main}
       <p><a class="btn" href="${site.bookingUrl}">Book a call with our founder</a> &nbsp; <a href="/#go">Get the free workshop</a></p>
     </aside>
   </main>
-  <footer class="pg-foot"><div class="in"><span>${esc(site.name)}™ · © ${new Date().getFullYear()}</span><span><a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="mailto:${site.email}">${site.email}</a></span></div></footer>
+  <footer class="pg-foot"><div class="in"><span>© ${new Date().getFullYear()} Codevantage Inc. All rights reserved.</span><span><a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="mailto:${site.email}">${site.email}</a></span></div></footer>
 </body>
 </html>
 `;
@@ -394,7 +402,7 @@ ${site.summary}
 ${site.outcomes.map((o) => `- ${o}`).join('\n')}
 
 ## Case studies
-${site.caseStudies.map((c) => `### ${c.industry}: ${c.result}\n${c.description}`).join('\n\n')}
+${site.caseStudies.map((c) => `### ${c.industry}: ${c.result}\n${c.description}${c.url ? `\n\nFull case study: ${site.url}${c.url}\n\n` + caseStudyMd(c) : ''}`).join('\n\n')}
 
 ## Services
 ${site.services.map((s) => `- **${s.name}**: ${s.description}`).join('\n')}

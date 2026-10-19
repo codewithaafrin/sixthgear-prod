@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From 9 hours to 4 minutes: AI support agent case study | Sixth Gear</title>
+  <meta name="description" content="How Sixth Gear replaced a departing support engineer with an AI agent in 10 working days, cutting first reply from 9 hours to under 4 minutes.">
+  <link rel="canonical" href="https://sixthgear.ai/case-studies/ai-support-agent/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#0e0c0a">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Sixth Gear">
+  <meta property="og:title" content="From 9 Hours to 4 Minutes: How an AI Support Agent Replaced a Departing Hire">
+  <meta property="og:description" content="How Sixth Gear replaced a departing support engineer with an AI agent in 10 working days, cutting first reply from 9 hours to under 4 minutes.">
+  <meta property="og:url" content="https://sixthgear.ai/case-studies/ai-support-agent/">
+  <meta property="og:image" content="https://sixthgear.ai/brand/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="From 9 Hours to 4 Minutes: How an AI Support Agent Replaced a Departing Hire">
+  <meta name="twitter:description" content="How Sixth Gear replaced a departing support engineer with an AI agent in 10 working days, cutting first reply from 9 hours to under 4 minutes.">
+  <meta name="twitter:image" content="https://sixthgear.ai/brand/og-image.png">
+  <link rel="alternate" type="text/markdown" href="https://sixthgear.ai/case-studies/ai-support-agent/index.md">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&amp;family=Martian+Mono:wdth,wght@75..112.5,100..800&amp;family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0..1;1,9..144,100..900,0..100,0..1&amp;display=swap">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <style>
+body{margin:0;background:#0e0c0a}
+
+.cs,.cs *{box-sizing:border-box}
+.cs{background:#0e0c0a;color:#f2ece4;font-family:'Anybody',system-ui,sans-serif;font-variation-settings:'wdth' 100,'wght' 380;-webkit-font-smoothing:antialiased;min-height:100vh}
+.cs a{text-decoration:none;color:inherit}
+.cs ::selection{background:#fe7802;color:#0e0c0a}
+.cs a:focus-visible{outline:2px solid #ffaf38;outline-offset:4px}
+.cs-in{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+.cs-mono{font-family:'Martian Mono',ui-monospace,Menlo,monospace;font-variation-settings:'wdth' 88;letter-spacing:.14em;text-transform:uppercase}
+.cs-serif{font-family:'Fraunces',Georgia,serif;font-weight:300}
+.cs-nav{position:sticky;top:0;z-index:10;background:rgba(14,12,10,.82);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(242,236,228,.07)}
+.cs-nav .cs-in{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.cs-brand{display:flex;align-items:center;gap:12px;font-variation-settings:'wdth' 140,'wght' 520;font-size:13px;letter-spacing:.3em;text-transform:uppercase;white-space:nowrap}
+.cs-links{display:flex;align-items:center;gap:4px;padding:4px;border-radius:999px;border:1px solid rgba(242,236,228,.1);background:rgba(21,18,16,.6)}
+.cs-links a{padding:9px 16px;border-radius:999px;font-size:14px;font-variation-settings:'wdth' 116,'wght' 460;color:#a8a29b;white-space:nowrap;transition:color .14s,background-color .14s}
+.cs-links a:hover{color:#f2ece4}
+.cs-links a.solid{background:#f2ece4;color:#0e0c0a;font-variation-settings:'wdth' 116,'wght' 560}
+.cs-links a.solid:hover{background:#fe7802}
+.cs-hero{position:relative;padding:clamp(48px,7vw,104px) 0 clamp(40px,5vw,72px);overflow:hidden}
+.cs-glow{position:absolute;right:-20%;top:-30%;width:70vw;height:70vw;max-width:900px;max-height:900px;border-radius:50%;background:radial-gradient(circle,rgba(254,120,2,.16),rgba(254,120,2,0) 62%);pointer-events:none}
+.cs-back{display:inline-flex;align-items:center;gap:10px;font-size:10.5px;color:#8d8780;transition:color .14s}
+.cs-back:hover{color:#ffaf38}
+.cs-tags{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:clamp(24px,3vw,36px) 0 clamp(18px,2vw,26px)}
+.cs-pill{padding:7px 12px;border-radius:999px;background:#fe7802;color:#0e0c0a;font-size:10.5px;font-variation-settings:'wdth' 88,'wght' 500}
+.cs-h1{margin:0;max-width:16ch;font-variation-settings:'wdth' 110,'wght' 300;font-size:clamp(2.8rem,7.4vw,6.4rem);line-height:.98;letter-spacing:-.045em;text-wrap:balance}
+.cs-h1 em{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:300;color:#fe7802;letter-spacing:-.03em}
+.cs-sub{margin:clamp(16px,2vw,24px) 0 0;max-width:30ch;font-variation-settings:'wdth' 108,'wght' 340;font-size:clamp(1.3rem,2.4vw,2rem);line-height:1.15;letter-spacing:-.02em;color:#c9c2b9}
+.cs-lede{margin:clamp(22px,2.6vw,32px) 0 0;max-width:46rem;font-size:clamp(1.05rem,1.4vw,1.22rem);line-height:1.6;color:#a8a29b}
+.cs-meta{margin-top:clamp(32px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));border-top:1px solid rgba(242,236,228,.1)}
+.cs-meta div{padding:18px 24px 0 0}
+.cs-meta span{display:block;font-size:10px;color:#8d8780;margin-bottom:10px}
+.cs-meta p{margin:0;font-size:15px;line-height:1.45;color:#f2ece4}
+.cs-kpis{border-top:1px solid rgba(242,236,228,.07);border-bottom:1px solid rgba(242,236,228,.07);background:#120f0d}
+.cs-kpis .cs-kpigrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.cs-kpis-h{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 20px;padding-top:clamp(22px,2.6vw,30px);padding-bottom:clamp(18px,2vw,24px);border-bottom:1px solid rgba(242,236,228,.07);font-size:10.5px;color:#ffaf38}
+.cs-kpis-h span{display:inline-flex;align-items:center;gap:12px}
+.cs-kpis-h small{font-size:10px;color:#8d8780}
+.cs-dot{width:8px;height:8px;border-radius:50%;background:#fe7802;box-shadow:0 0 12px #fe7802}
+.cs-kpi{padding:clamp(28px,3vw,40px) clamp(18px,2.6vw,36px);border-right:1px solid rgba(242,236,228,.07)}
+.cs-kpi:first-child{padding-left:0}
+.cs-kpi:last-child{border-right:0;padding-right:0}
+@media (max-width:980px){
+ .cs-kpis .cs-kpigrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .cs-kpi{padding-left:clamp(18px,2.6vw,36px);padding-right:clamp(18px,2.6vw,36px)}
+ .cs-kpi:nth-child(odd){padding-left:0}
+ .cs-kpi:nth-child(even){border-right:0;padding-right:0}
+ .cs-kpi:nth-child(-n+2){border-bottom:1px solid rgba(242,236,228,.07)}
+}
+.cs-kpi b{display:block;font-weight:inherit;font-variation-settings:'wdth' 120,'wght' 260;font-size:clamp(2.4rem,4.2vw,3.6rem);line-height:1;letter-spacing:-.04em;white-space:nowrap}
+.cs-kpi b i{font-style:normal;color:#fe7802;font-size:.6em;letter-spacing:-.02em}
+.cs-kpi p{margin:12px 0 6px;font-size:15px;color:#f2ece4}
+.cs-kpi small{font-size:10px;color:#8d8780}
+.cs-sec{padding:clamp(56px,7vw,104px) 0;border-top:1px solid rgba(242,236,228,.07)}
+.cs-sec:first-of-type{border-top:0}
+.cs-split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:clamp(28px,5vw,80px);align-items:start}
+.cs-eyebrow{font-size:10.5px;color:#8d8780;margin-bottom:16px}
+.cs-eyebrow em{font-style:normal;color:#fe7802}
+.cs-h2{margin:0;font-variation-settings:'wdth' 110,'wght' 340;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.06;letter-spacing:-.03em;text-wrap:balance}
+.cs-h2 em{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:300;color:#fe7802}
+.cs-intro{margin:18px 0 0;max-width:30rem;font-size:clamp(1rem,1.3vw,1.12rem);line-height:1.6;color:#a8a29b}
+.cs-sticky{position:sticky;top:104px}
+.cs-pains{list-style:none;margin:0;padding:0}
+.cs-pains li{display:grid;grid-template-columns:44px 1fr;gap:6px 14px;padding:22px 0;border-top:1px solid rgba(242,236,228,.1)}
+.cs-pains li:last-child{border-bottom:1px solid rgba(242,236,228,.1)}
+.cs-pains .n{font-size:10.5px;color:#fe7802;padding-top:5px}
+.cs-pains h3{margin:0;font-variation-settings:'wdth' 106,'wght' 460;font-size:clamp(1.05rem,1.5vw,1.2rem);line-height:1.3;color:#f2ece4}
+.cs-pains p{grid-column:2;margin:0;font-size:clamp(.98rem,1.2vw,1.06rem);line-height:1.55;color:#a8a29b}
+.cs-grid{margin-top:clamp(32px,4vw,52px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(14px,1.6vw,20px)}
+.cs-card{position:relative;padding:clamp(22px,2.4vw,30px);border-radius:20px;border:1px solid rgba(242,236,228,.1);background:#151210;transition:border-color .19s,transform .19s}
+.cs-card:hover{border-color:rgba(254,120,2,.5);transform:translateY(-3px)}
+.cs-card .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+.cs-ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(254,120,2,.12);color:#fe7802}
+.cs-card .k{font-size:10px;color:#6d6862}
+.cs-card h3{margin:0 0 8px;font-variation-settings:'wdth' 106,'wght' 460;font-size:1.15rem;line-height:1.3}
+.cs-card p{margin:0;font-size:.98rem;line-height:1.55;color:#a8a29b}
+.cs-safe{margin-top:clamp(14px,1.6vw,20px);display:flex;align-items:center;gap:18px;padding:18px clamp(18px,2.4vw,28px);border-radius:16px;border:1px dashed rgba(254,120,2,.45);background:rgba(254,120,2,.05)}
+.cs-safe p{margin:0;font-size:clamp(.98rem,1.2vw,1.06rem);line-height:1.5;color:#d6cfc6}
+.cs-live{display:inline-flex;align-items:center;gap:12px;margin-top:20px;padding:10px 16px;border-radius:999px;border:1px solid rgba(254,120,2,.35);font-size:10px;color:#ffaf38}
+.cs-dot{width:8px;height:8px;border-radius:50%;background:#fe7802;box-shadow:0 0 12px #fe7802}
+.cs-table{margin-top:clamp(32px,4vw,52px);border-top:1px solid rgba(242,236,228,.12)}
+.cs-row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.6fr) minmax(0,.6fr) minmax(0,1fr);gap:16px 24px;align-items:center;padding:20px 0;border-bottom:1px solid rgba(242,236,228,.08)}
+.cs-row.head{padding:14px 0;font-size:10px;color:#8d8780}
+.cs-row .l{font-size:clamp(1rem,1.3vw,1.1rem);color:#f2ece4}
+.cs-row .b{font-size:clamp(.98rem,1.2vw,1.06rem);color:#8d8780}
+.cs-row .a{font-variation-settings:'wdth' 110,'wght' 460;font-size:clamp(1.1rem,1.5vw,1.3rem);color:#ffaf38}
+.cs-imp{display:flex;align-items:center;gap:16px}
+.cs-imp .cs-bars{flex:1;min-width:60px}
+.cs-x{flex:none;min-width:7.5em;text-align:right;font-variation-settings:'wdth' 110,'wght' 500;font-size:clamp(1rem,1.3vw,1.12rem);color:#fe7802;white-space:nowrap}
+.cs-bars{display:grid;gap:7px}
+.cs-bars span{display:block;height:6px;border-radius:3px}
+.cs-bars .bb{background:rgba(242,236,228,.22)}
+.cs-bars .ab{background:#fe7802;box-shadow:0 0 12px rgba(254,120,2,.55);min-width:6px}
+.cs-wins{margin-top:clamp(18px,2vw,28px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(14px,1.6vw,20px)}
+.cs-win{padding:clamp(22px,2.6vw,32px);border-radius:20px;border:1px solid rgba(242,236,228,.1);background:radial-gradient(ellipse 90% 90% at 0% 100%,rgba(254,120,2,.12),transparent 60%),#151210}
+.cs-win b{display:block;font-weight:inherit;font-variation-settings:'wdth' 120,'wght' 260;font-size:clamp(2.4rem,4vw,3.4rem);line-height:1;letter-spacing:-.04em}
+.cs-win b i{font-style:normal;color:#fe7802}
+.cs-win p{margin:14px 0 0;font-size:clamp(1rem,1.3vw,1.1rem);line-height:1.55;color:#a8a29b}
+.cs-quote{margin:0;padding:clamp(56px,7vw,104px) 0;text-align:center;border-top:1px solid rgba(242,236,228,.07)}
+.cs-quote .mark{display:block;font-family:'Fraunces',Georgia,serif;font-size:clamp(4rem,8vw,7rem);line-height:.6;color:#fe7802}
+.cs-quote blockquote{margin:24px auto 0;max-width:30em;font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(1.5rem,3vw,2.5rem);line-height:1.3;letter-spacing:-.01em;color:#f2ece4;text-wrap:balance}
+.cs-quote figcaption{margin-top:26px;font-size:10.5px;color:#8d8780}
+.cs-cta{padding:clamp(56px,7vw,96px) 0;border-top:1px solid rgba(242,236,228,.07);background:radial-gradient(ellipse 55% 70% at 50% 100%,rgba(254,120,2,.12),transparent 70%)}
+.cs-cta .cs-in{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px}
+.cs-btns{display:flex;flex-wrap:wrap;gap:12px}
+.cs-btn{display:inline-flex;align-items:center;gap:14px;min-height:54px;padding:0 26px;border-radius:999px;font-size:15px;font-variation-settings:'wdth' 116,'wght' 560;transition:background-color .14s,color .14s,border-color .14s}
+.cs-btn.pri{background:#fe7802;color:#0e0c0a}
+.cs-btn.pri:hover{background:#ffaf38}
+.cs-btn.sec{border:1px solid rgba(242,236,228,.25);color:#f2ece4}
+.cs-btn.sec:hover{border-color:#ffaf38;color:#ffaf38}
+.cs-foot{border-top:1px solid rgba(242,236,228,.07)}
+.cs-foot .cs-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px;padding-top:28px;padding-bottom:28px;font-size:10px;color:#8d8780}
+@media (max-width:720px){
+ .cs-row{grid-template-columns:1fr 1fr}
+ .cs-row .l{grid-column:1 / -1}
+ .cs-row .bars{grid-column:1 / -1}
+ .cs-row.head{display:none}
+ .cs-kpi b{font-size:2.2rem}
+ .cs-sticky{position:static}
+ .cs-links a.hide-sm{display:none}
+}
+
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://sixthgear.ai/case-studies/ai-support-agent/#article",
+      "headline": "From 9 Hours to 4 Minutes: How an AI Support Agent Replaced a Departing Hire",
+      "description": "A no-code website builder was three weeks from losing the only engineer who could handle technical support. Sixth Gear replaced that role with an AI agent in 10 working days, cutting first-reply time from 9 hours to under 4 minutes and shipping three bug fixes as tested pull requests in the first month.",
+      "url": "https://sixthgear.ai/case-studies/ai-support-agent/",
+      "mainEntityOfPage": "https://sixthgear.ai/case-studies/ai-support-agent/",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "inLanguage": "en",
+      "articleSection": "Case study",
+      "image": "https://sixthgear.ai/brand/og-image.png",
+      "author": {
+        "@id": "https://sixthgear.ai/#org"
+      },
+      "publisher": {
+        "@id": "https://sixthgear.ai/#org"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "AI customer support agent"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI workflow automation"
+        }
+      ],
+      "keywords": "AI support agent, customer support automation, AI debugging, SaaS support, first reply time"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://sixthgear.ai/#org",
+      "name": "Sixth Gear",
+      "url": "https://sixthgear.ai/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sixthgear.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Case studies",
+          "item": "https://sixthgear.ai/#case-studies"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI support agent",
+          "item": "https://sixthgear.ai/case-studies/ai-support-agent/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <script src="/assets/ai-referral.js" defer></script>
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+<div class="cs">
+<header class="cs-nav"><div class="cs-in">
+  <a class="cs-brand" href="/" aria-label="Sixth Gear home"><svg width="30" height="22" viewBox="-6 -6 112 76" aria-hidden="true"><g stroke="#f2ece4" stroke-width="7" stroke-linecap="round" fill="none"><path d="M10 6v52M50 6v52M90 6v52M10 32h80"/></g><circle cx="90" cy="58" r="10" fill="#fe7802"/></svg><span>Sixth Gear</span></a>
+  <nav aria-label="Primary" style="display: flex; align-items: center; gap: 4px; padding: 4px; border-radius: 999px; border: 1px solid rgba(242,236,228,.1); background: rgba(21,18,16,.6)">
+        <a class="sg-navlink solid" href="#go" data-on-click="form.open" aria-haspopup="dialog" style="padding: 9px 18px; border-radius: 999px; background: #f2ece4; color: #0e0c0a; font-family: 'Anybody', system-ui, sans-serif; font-variation-settings: 'wdth' 116, 'wght' 560; font-size: 14px; white-space: nowrap">Transform now</a>
+        <div class="sg-dd" style="position: relative">
+          <button class="sg-navlink ghost" type="button" aria-haspopup="true" aria-expanded="false" data-on-click="res.toggle" style="display: flex; align-items: center; gap: 8px; padding: 9px 16px 9px 18px; border: 0; border-radius: 999px; background: transparent; color: #a8a29b; font-family: 'Anybody', system-ui, sans-serif; font-variation-settings: 'wdth' 116, 'wght' 460; font-size: 14px; white-space: nowrap; cursor: pointer">
+            <span>Resources</span>
+            <svg class="sg-chev" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3.5l3 3 3-3"></path></svg>
+          </button>
+          <div class="sg-menu" style="position: absolute; right: -4px; top: calc(100% + 12px); min-width: 220px; padding: 6px; border-radius: 16px; border: 1px solid rgba(242,236,228,.12); background: rgba(21,18,16,.96); -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px); box-shadow: 0 30px 80px -30px rgba(0,0,0,.8), 0 0 0 1px rgba(254,120,2,.06); display: flex; flex-direction: column; gap: 2px">
+            <a class="sg-mi" href="/#case-studies" data-on-click="res.close" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; padding: 0 14px; border-radius: 10px; color: #f2ece4; font-family: 'Anybody', system-ui, sans-serif; font-variation-settings: 'wdth' 116, 'wght' 460; font-size: 14px">
+              <span>Case Studies</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fe7802" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"></path><path d="M13 6l6 6-6 6"></path></svg>
+            </a>
+            <a class="sg-mi" href="/blog/" data-on-click="res.close" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; padding: 0 14px; border-radius: 10px; color: #f2ece4; font-family: 'Anybody', system-ui, sans-serif; font-variation-settings: 'wdth' 116, 'wght' 460; font-size: 14px">
+              <span>Blogs</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fe7802" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"></path><path d="M13 6l6 6-6 6"></path></svg>
+            </a>
+          </div>
+        </div>
+      </nav>
+</div></header>
+<main>
+<section class="cs-hero"><div class="cs-glow" aria-hidden="true"></div><div class="cs-in" style="position:relative">
+  <a class="cs-back cs-mono" href="/#case-studies"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12H5"/><path d="M11 6l-6 6 6 6"/></svg><span>All case studies</span></a>
+  <div class="cs-tags"><span class="cs-pill cs-mono">SaaS Customer Service</span><span class="cs-mono" style="font-size:10.5px;color:#8d8780">Case study 01</span></div>
+  <h1 class="cs-h1">From 9 hours to <em>4 minutes.</em></h1>
+  <p class="cs-sub">How an AI support agent replaced a departing hire.</p>
+  <p class="cs-lede cs-serif">A no-code website builder was three weeks from losing the only engineer who could handle technical support. Sixth Gear replaced that role with an AI agent in 10 working days, cutting first-reply time from 9 hours to under 4 minutes and shipping three bug fixes as tested pull requests in the first month.</p>
+  <div class="cs-meta">
+<div><span class="cs-mono">Client</span><p>Bootstrapped website-builder SaaS · ~2,400 paying subscribers · team of four</p></div>
+<div><span class="cs-mono">Timeline</span><p>10 working days to launch</p></div>
+<div><span class="cs-mono">Scope</span><p>Support, debugging, weekly churn insights</p></div>
+</div>
+</div></section>
+<section class="cs-kpis" aria-label="Headline results"><div class="cs-in cs-kpis-h cs-mono"><span><span class="cs-dot" aria-hidden="true"></span>Results · first 30 days</span><small>Before → after Sixth Gear</small></div><div class="cs-in cs-kpigrid">
+<div class="cs-kpi"><b>3<i>m 40s</i></b><p>Median first reply</p><small class="cs-mono">vs 9 h 12 min before</small></div>
+<div class="cs-kpi"><b>1 in 20<i></i></b><p>Tickets needing a developer</p><small class="cs-mono">vs 1 in 4 before</small></div>
+<div class="cs-kpi"><b>5.5<i> h</i></b><p>To resolve technical tickets</p><small class="cs-mono">vs 2.3 days before</small></div>
+<div class="cs-kpi"><b>$68<i>k</i></b><p>Saved a year vs. a new hire</p><small class="cs-mono">vs $70k+ replacement cost</small></div>
+</div></section>
+
+<section class="cs-sec"><div class="cs-in cs-split"><div class="cs-sticky"><div class="cs-eyebrow cs-mono"><em>01</em> / The pain points</div><h2 class="cs-h2">Three weeks to lose <em>the only engineer</em> who knew support.</h2><p class="cs-intro cs-serif">Every technical ticket ran through one person, and he was leaving.</p></div><ol class="cs-pains">
+<li><span class="n cs-mono">01</span><h3>One person held all the technical knowledge.</h3><p class="cs-serif">A single engineer handled every ticket that needed the code or the account data. He was leaving in three weeks, with no handover plan.</p></li>
+<li><span class="n cs-mono">02</span><h3>Customers waited too long.</h3><p class="cs-serif">Median first reply was 9 hours on weekdays and 26 hours over weekends, in a product where a broken site is urgent.</p></li>
+<li><span class="n cs-mono">03</span><h3>Technical tickets stalled.</h3><p class="cs-serif">One in four of ~60 monthly conversations needed a developer, and those took 2.3 days on average to resolve.</p></li>
+<li><span class="n cs-mono">04</span><h3>The founder was doing support.</h3><p class="cs-serif">He spent 6.5 hours a week answering tickets instead of building the product.</p></li>
+<li><span class="n cs-mono">05</span><h3>Answers drifted from the product.</h3><p class="cs-serif">The help docs lagged behind the code, and 14% of replies had to be corrected in a follow-up message.</p></li>
+<li><span class="n cs-mono">06</span><h3>Churn was spotted after the fact.</h3><p class="cs-serif">Cancellations surfaced in the billing dashboard days later, with no view of why or who was next.</p></li>
+<li><span class="n cs-mono">07</span><h3>Hiring wasn’t a real option.</h3><p class="cs-serif">A replacement would cost over $70,000 a year and take two to three months to ramp up on the codebase.</p></li>
+</ol></div></section>
+
+<section class="cs-sec"><div class="cs-in"><div class="cs-eyebrow cs-mono"><em>02</em> / What we built</div><h2 class="cs-h2">One agent that answers, investigates <em>and fixes.</em></h2><p class="cs-intro cs-serif" style="max-width:40rem">Scoped to the support ticket, while the client’s team keeps the final say.</p><div class="cs-grid">
+<article class="cs-card"><div class="top"><span class="cs-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></span><span class="k cs-mono">01</span></div><h3>Drafts inside the help desk</h3><p class="cs-serif">Every new message gets a ready-to-send reply plus a private note showing what was checked and where.</p></article>
+<article class="cs-card"><div class="top"><span class="cs-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-3.6 4-5.5 7-5.5s5.8 1.9 7 5.5"/></svg></span><span class="k cs-mono">02</span></div><h3>Account-aware answers</h3><p class="cs-serif">Read-only access to the customer’s account, billing, product analytics, logs and live DNS, so replies reflect their real plan, sites and charges.</p></article>
+<article class="cs-card"><div class="top"><span class="cs-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></span><span class="k cs-mono">03</span></div><h3>Answers checked against the code</h3><p class="cs-serif">When the knowledge base and production code disagree, the agent holds the reply and flags it.</p></article>
+<article class="cs-card"><div class="top"><span class="cs-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9h17M8 13l2 2-2 2M12 17h4"/></svg></span><span class="k cs-mono">04</span></div><h3>Debugging to the line of code</h3><p class="cs-serif">The agent rebuilds the customer’s site in a sealed sandbox, reproduces the fault and traces its cause.</p></article>
+<article class="cs-card"><div class="top"><span class="cs-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="5.5" r="2"/><circle cx="6" cy="18.5" r="2"/><circle cx="18" cy="18.5" r="2"/><path d="M6 7.5v9M18 16.5V10a3 3 0 0 0-3-3h-4M13 4.5 10.5 7 13 9.5"/></svg></span><span class="k cs-mono">05</span></div><h3>Fixes as draft pull requests</h3><p class="cs-serif">A PR opens only when the failing reproduction passes after the change. Merging stays with the team.</p></article>
+<article class="cs-card"><div class="top"><span class="cs-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2.5-6 4 12 2.5-6H21"/></svg></span><span class="k cs-mono">06</span></div><h3>Weekly customer pulse</h3><p class="cs-serif">A Monday summary of new signups, cancellations, likely churn reasons and at-risk accounts.</p></article>
+</div><div class="cs-safe"><span class="cs-ico" style="flex:none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></span><p class="cs-serif">It runs on a hardened private server with read-only credentials, and every lookup is limited to the one customer in the conversation.</p></div></div></section>
+
+<section class="cs-sec"><div class="cs-in"><div class="cs-eyebrow cs-mono"><em>03</em> / Results after 30 days</div><h2 class="cs-h2">Support carried on <em>without a gap.</em></h2><div class="cs-table" role="table" aria-label="Results after 30 days"><div class="cs-row head cs-mono" role="row"><span role="columnheader">Pain point</span><span role="columnheader">Before</span><span role="columnheader">After 30 days</span><span role="columnheader">Improvement</span></div>
+<div class="cs-row" role="row"><span class="l" role="cell">Median time to first reply</span><span class="b" role="cell">9 h 12 min</span><span class="a" role="cell">3 min 40 s</span><span class="cs-imp bars" role="cell"><span class="cs-bars" aria-hidden="true"><span class="bb" style="width:100%"></span><span class="ab" style="width:2%"></span></span><span class="cs-x">150× faster</span></span></div>
+<div class="cs-row" role="row"><span class="l" role="cell">Weekend first reply</span><span class="b" role="cell">26 h</span><span class="a" role="cell">4 min 10 s</span><span class="cs-imp bars" role="cell"><span class="cs-bars" aria-hidden="true"><span class="bb" style="width:100%"></span><span class="ab" style="width:2%"></span></span><span class="cs-x">374× faster</span></span></div>
+<div class="cs-row" role="row"><span class="l" role="cell">Tickets needing a developer</span><span class="b" role="cell">1 in 4</span><span class="a" role="cell">1 in 20</span><span class="cs-imp bars" role="cell"><span class="cs-bars" aria-hidden="true"><span class="bb" style="width:100%"></span><span class="ab" style="width:20%"></span></span><span class="cs-x">5× fewer</span></span></div>
+<div class="cs-row" role="row"><span class="l" role="cell">Time to resolve technical tickets</span><span class="b" role="cell">2.3 days</span><span class="a" role="cell">5.5 hours</span><span class="cs-imp bars" role="cell"><span class="cs-bars" aria-hidden="true"><span class="bb" style="width:100%"></span><span class="ab" style="width:10%"></span></span><span class="cs-x">10× faster</span></span></div>
+<div class="cs-row" role="row"><span class="l" role="cell">Founder hours on support per week</span><span class="b" role="cell">6.5</span><span class="a" role="cell">1.2</span><span class="cs-imp bars" role="cell"><span class="cs-bars" aria-hidden="true"><span class="bb" style="width:100%"></span><span class="ab" style="width:18%"></span></span><span class="cs-x">5.4× less</span></span></div>
+<div class="cs-row" role="row"><span class="l" role="cell">Replies needing a correction</span><span class="b" role="cell">14%</span><span class="a" role="cell">2%</span><span class="cs-imp bars" role="cell"><span class="cs-bars" aria-hidden="true"><span class="bb" style="width:100%"></span><span class="ab" style="width:14%"></span></span><span class="cs-x">7× fewer</span></span></div>
+</div><div class="cs-wins"><div class="cs-win"><b>$912<i> kept</i></b><p class="cs-serif">The weekly pulse flagged five at-risk subscribers in its first month. Four stayed after outreach, keeping $912 in annual revenue.</p></div><div class="cs-win"><b>~$68k<i> / yr</i></b><p class="cs-serif">Saved against a new hire, who would have cost over $70,000 a year and taken two to three months to ramp up.</p></div><div class="cs-win"><b>3<i> fixes</i></b><p class="cs-serif">Bug fixes shipped as tested pull requests in the first month, ready for the client’s team to review and merge.</p></div></div></div></section>
+
+<figure class="cs-quote"><div class="cs-in"><span class="mark" aria-hidden="true">“</span><blockquote>I expected a chatbot. What we got behaves like a careful engineer: it checks the account, reads the code and shows its working. I haven’t opened the support inbox on a weekend since it went live.</blockquote><figcaption class="cs-mono">— CEO, website-builder SaaS</figcaption></div></figure>
+
+<section class="cs-cta"><div class="cs-in"><div><div class="cs-eyebrow cs-mono">Your turn</div><h2 class="cs-h2" style="max-width:18ch">Your support queue, <em>in a higher gear.</em></h2></div>
+<div class="cs-btns"><a class="cs-btn pri" href="/#go" data-on-click="form.open" aria-haspopup="dialog"><span>Transform now</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg></a><a class="cs-btn sec" href="/#go" data-on-click="ws.open" aria-haspopup="dialog"><span>Try the free workshop</span></a></div></div></section>
+</main>
+<footer class="cs-foot"><div class="cs-in cs-mono"><span>© 2026 Codevantage Inc. All rights reserved.</span><span><a href="/">Home</a> · <a href="/#case-studies">Case studies</a> · <a href="mailto:admin@codevantage.io">admin@codevantage.io</a></span></div></footer>
+<div class="sg">
+  <!-- ===== LEAD FORM POPUP ===== -->
+  <div data-modal="form" hidden>
+    <div class="sg-ov" data-on-click="form.backdrop" data-on-keydown="form.keydown" style="position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; padding: 16px; background: rgba(9,7,6,.72); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); overflow-y: auto">
+      <div class="sg-pop" role="dialog" aria-modal="true" aria-labelledby="sg-f-title" style="position: relative; width: 100%; max-width: 560px; margin: auto; border-radius: 26px; border: 1px solid rgba(242,236,228,.12); background: #151210; box-shadow: 0 60px 140px -40px rgba(0,0,0,.9), 0 40px 120px -60px rgba(254,120,2,.45); overflow: hidden">
+        <div aria-hidden="true" style="height: 3px; background: linear-gradient(90deg, #fe7802, #ffaf38 60%, transparent)"></div>
+        <button type="button" aria-label="Close" data-on-click="form.close" class="sg-x" style="position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(242,236,228,.14); background: transparent; color: #c9c2b9; display: flex; align-items: center; justify-content: center; cursor: pointer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
+        </button>
+        <form novalidate data-on-submit="form.submit" data-on-keydown="form.enter" style="display: flex; flex-direction: column; gap: 18px; padding: clamp(24px, 5vw, 40px)">
+              <input type="text" name="website" data-hp="form" class="sg-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div style="display: flex; flex-direction: column; gap: 10px; padding-right: 48px">
+            <span style="display: flex; align-items: center; gap: 10px; font-family: 'Martian Mono', ui-monospace, Menlo, monospace; font-variation-settings: 'wdth' 88; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: #ffaf38">
+              <svg width="24" height="16" viewBox="-6 -6 112 76" aria-hidden="true" style="overflow: visible"><g stroke="#f2ece4" stroke-opacity=".4" fill="none"><line x1="10" y1="6" x2="10" y2="58" vector-effect="non-scaling-stroke" stroke-width="1.2"></line><line x1="50" y1="6" x2="50" y2="58" vector-effect="non-scaling-stroke" stroke-width="1.2"></line><line x1="90" y1="6" x2="90" y2="58" vector-effect="non-scaling-stroke" stroke-width="1.2"></line><line x1="10" y1="32" x2="90" y2="32" vector-effect="non-scaling-stroke" stroke-width="1.2"></line></g><circle cx="90" cy="58" r="11" fill="#fe7802"></circle></svg>
+              Transform now
+            </span>
+            <h2 id="sg-f-title" style="margin: 0; font-family: 'Anybody', system-ui, sans-serif; font-variation-settings: 'wdth' 116, 'wght' 380; font-size: clamp(1.7rem, 4vw, 2.2rem); line-height: 1.05; letter-spacing: -.025em; color: #f2ece4">Let’s find your <span style="color: #fe7802">sixth gear.</span></h2>
+            <p style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 1.02rem; line-height: 1.5; color: #a8a29b">Tell us a little about your business.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 18px">
+            <div style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+              <label for="sg-f-name" class="sg-lbl">Name <span aria-hidden="true" style="color: #fe7802">*</span></label>
+              <input data-ref="fName" id="sg-f-name" class="sg-in" type="text" name="name" autoComplete="name" required maxLength="80" data-on-change="form.set.name" data-on-blur="form.blur.name" aria-invalid="false" aria-describedby="sg-e-name">
+              <span id="sg-e-name" class="sg-err" aria-live="polite"></span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+              <label for="sg-f-email" class="sg-lbl">Work email <span aria-hidden="true" style="color: #fe7802">*</span></label>
+              <input data-ref="fEmail" id="sg-f-email" class="sg-in" type="email" name="email" autoComplete="email" inputMode="email" required maxLength="120" data-on-change="form.set.email" data-on-blur="form.blur.email" aria-invalid="false" aria-describedby="sg-e-email">
+              <span id="sg-e-email" class="sg-err" aria-live="polite"></span>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px">
+            <label for="sg-f-company" class="sg-lbl">Company name <span aria-hidden="true" style="color: #fe7802">*</span></label>
+            <input data-ref="fCompany" id="sg-f-company" class="sg-in" type="text" name="company" autoComplete="organization" required maxLength="120" data-on-change="form.set.company" data-on-blur="form.blur.company" aria-invalid="false" aria-describedby="sg-e-company">
+            <span id="sg-e-company" class="sg-err" aria-live="polite"></span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
+              <label for="sg-f-needs" class="sg-lbl">What specific needs are you looking to solve? <span aria-hidden="true" style="color: #fe7802">*</span></label>
+              <span aria-hidden="true" style="flex: none; font-family: 'Martian Mono', ui-monospace, Menlo, monospace; font-variation-settings: 'wdth' 88; font-size: 10px; color: #6d6862"><span data-bind="needsCount">0</span> / 1000</span>
+            </div>
+            <textarea data-ref="fNeeds" id="sg-f-needs" class="sg-in" name="needs" rows="4" required maxLength="1000" data-on-change="form.set.needs" data-on-blur="form.blur.needs" aria-invalid="false" aria-describedby="sg-e-needs" placeholder="e.g. Our support team spends hours triaging tickets…" style="resize: vertical; min-height: 120px; line-height: 1.5"></textarea>
+            <span id="sg-e-needs" class="sg-err" aria-live="polite"></span>
+          </div>
+
+          <button class="sg-btn pri" type="button" data-on-click="form.submit" style="margin-top: 4px; display: flex; align-items: center; justify-content: center; gap: 18px; min-height: 56px; padding: 0 24px; border: 0; border-radius: 999px; background: #fe7802; color: #0e0c0a; font-family: 'Anybody', system-ui, sans-serif; font-variation-settings: 'wdth' 116, 'wght' 560; font-size: 16px; cursor: pointer">
+            <span>Get In</span>
+            <span class="sg-l" aria-hidden="true"><i style="background: #0e0c0a"></i><i style="background: #0e0c0a"></i><i style="background: #0e0c0a"></i><i style="background: #0e0c0a"></i><i style="background: #0e0c0a"></i><i style="background: #0e0c0a"></i></span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- success -->
+  <div data-modal="done" hidden>
+    <div class="sg-ov" data-on-click="form.backdrop" data-on-keydown="form.keydown" style="position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; padding: 16px; background: rgba(9,7,6,.72); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px)">
+      <div class="sg-pop" role="dialog" aria-modal="true" aria-labelledby="sg-d-title" style="position: relative; width: 100%; max-width: 460px; border-radius: 26px; border: 1px solid rgba(242,236,228,.12); background: #151210; padding: clamp(28px, 5vw, 40px); display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; box-shadow: 0 60px 140px -40px rgba(0,0,0,.9), 0 40px 120px -60px rgba(254,120,2,.45)">
+        <button data-ref="doneBtn" type="button" aria-label="Close" data-on-click="form.close" class="sg-x" style="position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(242,236,228,.14); background: transparent; color: #c9c2b9; display: flex; align-items: center; justify-content: center; cursor: pointer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
+        </button>
+        <svg width="72" height="48" viewBox="-6 -6 112 76" aria-hidden="true" style="overflow: visible; margin-top: 8px"><g stroke="#f2ece4" stroke-opacity=".35" fill="none"><line x1="10" y1="6" x2="10" y2="58" vector-effect="non-scaling-stroke" stroke-width="1.4"></line><line x1="50" y1="6" x2="50" y2="58" vector-effect="non-scaling-stroke" stroke-width="1.4"></line><line x1="90" y1="6" x2="90" y2="58" vector-effect="non-scaling-stroke" stroke-width="1.4"></line><line x1="10" y1="32" x2="90" y2="32" vector-effect="non-scaling-stroke" stroke-width="1.4"></line></g><circle cx="90" cy="58" r="10" fill="#ffaf38" class="sg-breathe" style="transform-origin: 90px 58px; animation: sg-breathe 2.4s ease-in-out infinite"></circle></svg>
+        <h2 id="sg-d-title" style="margin: 0; font-family: 'Anybody', system-ui, sans-serif; font-variation-settings: 'wdth' 116, 'wght' 400; font-size: 1.8rem; letter-spacing: -.02em; color: #f2ece4">You’re in <span style="color: #fe7802">sixth gear.</span></h2>
+        <p style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 1.05rem; line-height: 1.5; color: #a8a29b">Thanks, <span data-bind="formFirst">there</span>.<br>Our team will reach out to you within the next business day!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FREE WORKSHOP POPUP ===== -->
+  <div data-modal="ws" hidden>
+    <div class="sg-ov" data-on-click="ws.backdrop" data-on-keydown="ws.keydown" style="position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; padding: 16px; background: rgba(9,7,6,.72); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); overflow-y: auto">
+      <div class="sg-pop" role="dialog" aria-modal="true" aria-labelledby="sg-w-title" style="position: relative; width: 100%; max-width: 900px; margin: auto; border-radius: 26px; border: 1px solid rgba(242,236,228,.12); background: #151210; box-shadow: 0 60px 140px -40px rgba(0,0,0,.9), 0 40px 120px -60px rgba(254,120,2,.45); overflow: hidden; display: flex; flex-wrap: wrap">
+        <button type="button" aria-label="Close" data-on-click="ws.close" class="sg-x" style="position: absolute; z-index: 2; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(242,236,228,.14); background: rgba(21,18,16,.6); color: #c9c2b9; display: flex; align-items: center; justify-content: center; cursor: pointer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
+        </button>
+
+        <!-- left half: what the worksheet covers -->
+        <div style="flex: 1 1 340px; min-width: 0; position: relative; padding: clamp(28px, 5vw, 48px); background: radial-gradient(ellipse 90% 70% at 0% 100%, rgba(254,120,2,.16), transparent 65%), #120f0d; border-right: 1px solid rgba(242,236,228,.08); display: flex; flex-direction: column; gap: 22px">
+          <span style="display: flex; align-items: center; gap: 10px; font-family: 'Martian Mono', ui-monospace, Menlo, monospace; font-variation-settings: 'wdth' 88; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: #ffaf38">
+            <svg width="24" height="16" viewBox="-6 -6 112 76" aria-hidden="true" style="overflow: visible"><g stroke="#f2ece4" stroke-opacity=".4" fill="none"><line x1="10" y1="6" x2="10" y2="58" vector-effect="non-scaling-stroke" stroke-width="1.2"></line><line x1="50" y1="6" x2="50" y2="58" vector-effect="non-scaling-stroke" stroke-width="1.2"></line><line x1="90" y1="6" x2="90" y2="58" vector-effect="non-scaling-stroke" stroke-width="1.2"></line><line x1="10" y1="32" x2="90" y2="32" vector-effect="non-scaling-stroke" stroke-width="1.2"></line></g><circle cx="10" cy="6" r="11" fill="#fe7802"></circle></svg>
+            Free workshop
+          </span>
+          <h2 id="sg-w-title" style="margin: 0; font-family: 'Anybody', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 400; font-size: clamp(1.05rem, 2vw, 1.3rem); line-height: 1.2; letter-spacing: -.01em; white-space: nowrap; color: #f2ece4">This worksheet will help you:</h2>
+          <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+            
+              <li style="display: flex; align-items: baseline; gap: 16px; padding: 16px 0; border-top: 1px solid rgba(242,236,228,.08)">
+                <span style="flex: none; font-family: 'Martian Mono', ui-monospace, Menlo, monospace; font-variation-settings: 'wdth' 88; font-size: 11px; letter-spacing: .1em; color: #fe7802">01</span>
+                <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(1.02rem, 1.4vw, 1.12rem); line-height: 1.4; color: #c9c2b9">Identify bottlenecks and map the workflow</span>
+              </li>
+            
+              <li style="display: flex; align-items: baseline; gap: 16px; padding: 16px 0; border-top: 1px solid rgba(242,236,228,.08)">
+                <span style="flex: none; font-family: 'Martian Mono', ui-monospace, Menlo, monospace; font-variation-settings: 'wdth' 88; font-size: 11px; letter-spacing: .1em; color: #fe7802">02</span>
+                <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(1.02rem, 1.4vw, 1.12rem); line-height: 1.4; color: #c9c2b9">Assess readiness and risks</span>
+              </li>
+            
+              <li style="display: flex; align-items: baseline; gap: 16px; padding: 16px 0; border-top: 1px solid rgba(242,236,228,.08)">
+                <span style="flex: none; font-family: 'Martian Mono', ui-monospace, Menlo, monospace; font-variation-settings: 'wdth' 88; font-size: 11px; letter-spacing: .1em; color: #fe7802">03</span>
+                <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(1.02rem, 1.4vw, 1.12rem); line-height: 1.4; color: #c9c2b9">Build a case estimating costs and outcomes</span>
+              </li>
+            
+              <li style="display: flex; align-items: baseline; gap: 16px; padding: 16px 0; border-top: 1px solid rgba(242,236,228,.08)">
+                <span style="flex: none; font-family: 'Martian Mono', ui-monospace, Menlo, monospace; font-variation-settings: 'wdth' 88; font-size: 11px; letter-spacing: .1em; color: #fe7802">04</span>
+                <span style="font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(1.02rem, 1.4vw, 1.12rem); line-height: 1.4; color: #c9c2b9">Plan the pilot</span>
+              </li>
+            
+          </ol>
+        </div>
+
+        <!-- right half: the form -->
+        <div style="flex: 1 1 320px; min-width: 0; padding: clamp(28px, 5vw, 48px); padding-top: clamp(72px, 8vw, 80px)">
+          <div data-ws-view="form">
+            <form novalidate data-on-submit="ws.submit" data-on-keydown="ws.enter" style="display: flex; flex-direction: column; gap: 16px">
+              <input type="text" name="website" data-hp="ws" class="sg-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <div style="display: flex; flex-direction: column; gap: 8px">
+                <label for="sg-w-name" class="sg-lbl">Name <span aria-hidden="true" style="color: #fe7802">*</span></label>
+                <input data-ref="wName" id="sg-w-name" class="sg-in" type="text" name="name" autoComplete="name" required maxLength="80" data-on-change="ws.set.name" data-on-blur="ws.blur.name" aria-invalid="false" aria-describedby="sg-we-name">
+                <span id="sg-we-name" class="sg-err" aria-live="polite"></span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 8px">
+                <label for="sg-w-company" class="sg-lbl">Company <span aria-hidden="true" style="color: #fe7802">*</span></label>
+                <input data-ref="wCompany" id="sg-w-company" class="sg-in" type="text" name="company" autoComplete="organization" required maxLength="120" data-on-change="ws.set.company" data-on-blur="ws.blur.company" aria-invalid="false" aria-describedby="sg-we-company">
+                <span id="sg-we-company" class="sg-err" aria-live="polite"></span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 8px">
+                <label for="sg-w-email" class="sg-lbl">Email <span aria-hidden="true" style="color: #fe7802">*</span></label>
+                <input data-ref="wEmail" id="sg-w-email" class="sg-in" type="email" name="email" autoComplete="email" inputMode="email" required maxLength="120" data-on-change="ws.set.email" data-on-blur="ws.blur.email" aria-invalid="false" aria-describedby="sg-we-email">
+                <span id="sg-we-email" class="sg-err" aria-live="polite"></span>
+              </div>
+              <button class="sg-btn pri" type="button" data-on-click="ws.submit" style="margin-top: 4px; display: flex; align-items: center; justify-content: center; gap: 16px; min-height: 56px; padding: 0 22px; border: 0; border-radius: 999px; background: #fe7802; color: #0e0c0a; font-family: 'Anybody', system-ui, sans-serif; font-variation-settings: 'wdth' 112, 'wght' 560; font-size: 16px; cursor: pointer">
+                <span>Email me a copy now</span>
+                <span class="sg-l" aria-hidden="true"><i style="background: #0e0c0a"></i><i style="background: #0e0c0a"></i><i style="background: #0e0c0a"></i><i style="background: #0e0c0a"></i><i style="background: #0e0c0a"></i><i style="background: #0e0c0a"></i></span>
+              </button>
+            </form>
+          </div>
+          <div data-ws-view="done" hidden>
+            <div style="display: flex; flex-direction: column; gap: 14px; padding-top: 8px">
+              <svg width="64" height="42" viewBox="-6 -6 112 76" aria-hidden="true" style="overflow: visible"><g stroke="#f2ece4" stroke-opacity=".35" fill="none"><line x1="10" y1="6" x2="10" y2="58" vector-effect="non-scaling-stroke" stroke-width="1.4"></line><line x1="50" y1="6" x2="50" y2="58" vector-effect="non-scaling-stroke" stroke-width="1.4"></line><line x1="90" y1="6" x2="90" y2="58" vector-effect="non-scaling-stroke" stroke-width="1.4"></line><line x1="10" y1="32" x2="90" y2="32" vector-effect="non-scaling-stroke" stroke-width="1.4"></line></g><circle cx="10" cy="6" r="10" fill="#ffaf38" class="sg-breathe" style="transform-origin: 10px 6px; animation: sg-breathe 2.4s ease-in-out infinite"></circle></svg>
+              <h3 data-ref="wsDone" tabIndex="-1" style="margin: 0; outline: none; font-family: 'Anybody', system-ui, sans-serif; font-variation-settings: 'wdth' 112, 'wght' 400; font-size: 1.6rem; letter-spacing: -.02em; color: #f2ece4">You’re in <span style="color: #fe7802">first gear.</span></h3>
+              <p style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 1.05rem; line-height: 1.5; color: #a8a29b">Thanks, <span data-bind="wsFirst">there</span>. We’ll send the worksheet to <span data-bind="wsEmail">your inbox</span>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- fallback: closed without submitting -->
+  <div data-modal="book" hidden>
+    <div class="sg-ov" data-on-click="form.backdrop" data-on-keydown="form.keydown" style="position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; padding: 16px; background: rgba(9,7,6,.72); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px)">
+      <div class="sg-pop" role="dialog" aria-modal="true" aria-labelledby="sg-b-title" style="position: relative; width: 100%; max-width: 600px; border-radius: 26px; border: 1px solid rgba(242,236,228,.12); background: #151210; padding: clamp(56px, 7vw, 64px) clamp(20px, 5vw, 40px) clamp(28px, 5vw, 40px); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px; box-shadow: 0 60px 140px -40px rgba(0,0,0,.9), 0 40px 120px -60px rgba(254,120,2,.45)">
+        <button type="button" aria-label="Close" data-on-click="form.close" class="sg-x" style="position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(242,236,228,.14); background: transparent; color: #c9c2b9; display: flex; align-items: center; justify-content: center; cursor: pointer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
+        </button>
+        <span style="font-family: 'Martian Mono', ui-monospace, Menlo, monospace; font-variation-settings: 'wdth' 88; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: #ffaf38">Prefer to talk?</span>
+        <h2 id="sg-b-title" style="margin: 0; font-family: 'Anybody', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 380; font-size: clamp(1.15rem, 4.6vw, 1.75rem); line-height: 1.2; text-wrap: balance; letter-spacing: -.02em; color: #f2ece4"><span style="font-size: .8em">Book a Call with our</span> <em style="font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300; color: #fe7802">Founder</em> <span style="font-size: .8em">instead</span></h2>
+        <a data-ref="bookBtn" class="sg-btn pri" href="https://cal.com/aswin-kumar-kp/build-with-us" target="_blank" rel="noopener noreferrer" data-on-click="form.booked" style="display: inline-flex; align-self: center; align-items: center; gap: 18px; min-height: 56px; padding: 0 24px 0 30px; border-radius: 999px; background: #fe7802; color: #0e0c0a; font-family: 'Anybody', system-ui, sans-serif; font-variation-settings: 'wdth' 116, 'wght' 560; font-size: 16px">
+          <span>Book</span>
+          <span class="sg-l" aria-hidden="true"><i style="background: #0e0c0a"></i><i style="background: #0e0c0a"></i><i style="background: #0e0c0a"></i><i style="background: #0e0c0a"></i><i style="background: #0e0c0a"></i><i style="background: #0e0c0a"></i></span>
+          <svg class="sg-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e0c0a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>
